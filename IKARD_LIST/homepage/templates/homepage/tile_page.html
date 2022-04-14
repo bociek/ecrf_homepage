@@ -1,0 +1,132 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>diCELLa eCRF clinical trials dla badania IKARD</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'homepage/site.css' %}"/>                <!-- CSS files containing styles -->
+    <link rel="stylesheet" href="{% static 'homepage/css/bootstrap.min.css' %}">                    <!-- Bootstrap style file -->
+    <link rel="stylesheet" href="{% static 'homepage/css/bootstrap.css' %}">                        <!-- Bootstrap style file -->
+    {% comment %} <link rel="shortcut icon" type="image/png" href="{% static 'homepage/dicella-fav.ico' %}"/>     <!-- Favicon --> {% endcomment %}
+    {% block css %}{% endblock %}
+</head>
+<body class="theme">
+    <nav class="top-bar">
+        {% comment %} <div class="navbar-left">
+            <ui class="link-list">
+                <li class="left-link"><a class="nav-link" href="https://dicella.com/page/main/">Strona domowa</a></li>
+            </ui>
+        </div> {% endcomment %}
+        <div class="ecrf-logo">
+            <img class="logo-png" src="{% static 'homepage/img/dicella-ecrf-ct-logo-bckt.png' %}" alt="{% trans "Logo CRF"%}">
+        </div>
+        {% comment %} <div class="navbar-right">
+            <ui class="link-list">
+                <li class="right-link"><a class="nav-link" href="">Zmień układ</a></li>
+            </ui>
+        </div> {% endcomment %}
+    </nav>
+
+    <section class="main-content">
+        <h2 class="title-text">diCELLa eCRF clinical trials dla projektu:</h2>
+        <h2 class="title-text-second-line">IKARD</h2>
+        {% comment %} <h2 class="experiment-name">IKARD</h2> {% endcomment %}
+
+        <div class="title-text-mobile">
+            <h2 class="first-line-title">diCELLa eCRF clinical trials</h2>
+            <h2 class="second-line-title">dla projektu:</h2>
+            <h2 class="third-line-title">IKARD</h2>
+        </div>
+
+        <hr>
+
+        <h3 class="section-title">Wybierz badanie</h3>
+
+        <div class="card-section">
+            <div class="card-experiment">
+                <a class="experiment-link" href=""> 
+                    <p class="experiment-title">STOP_CLOT</p>
+                </a>
+            </div>
+            
+
+            <div class="card-experiment">
+                <a class="experiment-link" href=""> 
+                    <p class="experiment-title">SAFE_LAAC</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="card-section">
+            <div class="card-experiment">
+                <a class="experiment-link" href="">
+                    <p class="experiment-title">TEST_CLOT</p>
+                </a>
+            </div>
+
+            <div class="card-experiment">
+                <a class="experiment-link" href="">
+                    <p class="experiment-title">TEST_LAAC</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="card-section">
+            <div class="card-experiment">
+                <a class="experiment-link" href=""> 
+                    <p class="experiment-title">TEST_CLOT</p>
+                </a>
+            </div>
+
+            <div class="card-experiment">
+                <a class="experiment-link" href="">
+                    <p class="experiment-title">TEST_LAAC</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="card-section">
+            <div class="card-experiment">
+                <a class="experiment-link" href=""> 
+                    <p class="experiment-title">TEST_CLOT</p>
+                </a>
+            </div>
+
+            <div class="card-experiment">
+                <a class="experiment-link" href=""> 
+                    <p class="experiment-title">TEST_LAAC</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="card-section">
+            <div class="card-experiment">
+                <a class="experiment-link" href=""> 
+                    <p class="experiment-title">TEST_CLOT</p>
+                </a>
+            </div>
+
+            <div class="card-experiment">
+                <a class="experiment-link" href=""> 
+                    <p class="experiment-title">TEST_LAAC</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="bottom-bar">
+        <div class="foot-container">
+            <p class="foot-text">powered by</p>
+            <div class="dicella-logo">
+                <a class="dicella-homelink" href="https://dicella.com/page/main/">
+                <img class="dicella-logo" src="{% static 'homepage/img/diclogo.png' %}" alt="{% trans "Logo diCELLa"%}">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
