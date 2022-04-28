@@ -1,6 +1,5 @@
 {% load static %}
 {% load i18n %}
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -8,116 +7,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>diCELLa eCRF clinical trials dla badania IKARD</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'homepage/site.css' %}"/>                <!-- CSS files containing styles -->
     <link rel="stylesheet" href="{% static 'homepage/css/bootstrap.min.css' %}">                    <!-- Bootstrap style file -->
     <link rel="stylesheet" href="{% static 'homepage/css/bootstrap.css' %}">                        <!-- Bootstrap style file -->
+    <link rel="stylesheet" type="text/css" href="{% static 'homepage/site.css' %}"/>                <!-- CSS files containing styles -->
     {% comment %} <link rel="shortcut icon" type="image/png" href="{% static 'homepage/dicella-fav.ico' %}"/>     <!-- Favicon --> {% endcomment %}
+    <script src="https://unpkg.com/feather-icons"></script>                                         <!-- Feather icons attachment -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>          <!-- Feather icons attachment -->
+    {% comment %} <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>        <!-- jQuery attachment --> {% endcomment %}
     {% block css %}{% endblock %}
 </head>
 <body class="theme">
     <nav class="top-bar">
-        {% comment %} <div class="navbar-left">
+        <div class="navbar-left">
             <ui class="link-list">
-                <li class="left-link"><a class="nav-link" href="https://dicella.com/page/main/">Strona domowa</a></li>
+                <li class="left-link"><a class="nav-link" href="https://dicella.com/page/main/"><i data-feather="home"></i></a></li>
             </ui>
-        </div> {% endcomment %}
+        </div>
         <div class="ecrf-logo">
             <img class="logo-png" src="{% static 'homepage/img/dicella-ecrf-ct-logo-bckt.png' %}" alt="{% trans "Logo CRF"%}">
         </div>
-        {% comment %} <div class="navbar-right">
+        <div class="navbar-right">
             <ui class="link-list">
-                <li class="right-link"><a class="nav-link" href="">Zmień układ</a></li>
+                <li class="right-link" id="lightmode-btn" onclick="darkMode()"><button class="nav-link" href=""><i data-feather="sun"></i></button></li>
+                <li class="right-link" id="darkmode-btn"><a class="nav-link" href=""><i data-feather="moon"></i></a></li>
             </ui>
-        </div> {% endcomment %}
+        </div>
     </nav>
-
-    <section class="main-content">
-        <h2 class="title-text">diCELLa eCRF clinical trials dla projektu:</h2>
-        <h2 class="title-text-second-line">IKARD</h2>
+    <section class="main-content mx-auto w-md-75 w-sm-75">
+        <h2 class="title-text">diCELLa eCRF clinical trials</h2>
+        <h2 class="title-text-second-line">Narodowy Instytut Kardiologii Stefana kardynała Wyszyńskiego —</h2>
+        <h2 class="title-text-second-line">Państwowy Instytut Badawczy</h2>
         {% comment %} <h2 class="experiment-name">IKARD</h2> {% endcomment %}
-
         <div class="title-text-mobile">
             <h2 class="first-line-title">diCELLa eCRF clinical trials</h2>
-            <h2 class="second-line-title">dla projektu:</h2>
-            <h2 class="third-line-title">IKARD</h2>
+            {% comment %} <h2 class="second-line-title">dla projektu:</h2> {% endcomment %}
+            <h2 class="third-line-title">Narodowy Instytut Kardiologii Stefana kardynała Wyszyńskiego — Państwowy Instytut Badawczy</h2>
         </div>
-
         <hr>
-
         <h3 class="section-title">Wybierz badanie</h3>
-
-        <div class="card-section">
-            <div class="card-experiment">
-                <a class="experiment-link" href=""> 
-                    <p class="experiment-title">STOP_CLOT</p>
+        <div class="wrapper row w-100 mx-auto justify-content-center mt-4">
+            <div class="card-experiment col-md-5 col-lg-3 col-sm-12">
+                <a class="experiment-link" href="https://crf-stop-clot.dicella.com"> 
+                    <p class="experiment-title p-5"><i data-feather="play"></i> STOP CLOT</p>
                 </a>
             </div>
             
-
-            <div class="card-experiment">
+            <div class="card-experiment col-md-5 col-lg-3 col-sm-12">
+                <a class="experiment-link" href="https://crf-safe-laac.dicella.com"> 
+                    <p class="experiment-title p-5"><i data-feather="play"></i> SAFE LAAC</p>
+                </a>
+            </div>
+            <div class="card-experiment col-md-5 col-lg-3 col-sm-12">
+                <a class="experiment-link" href="https://crf-safe-laac-ckd.dicella.com">
+                    <p class="experiment-title p-5"><i data-feather="play"></i> SAFE LAAC CKD</p>
+                </a>
+            </div>
+            <div class="card-experiment col-md-5 col-lg-3 col-sm-12">
+                <a class="experiment-link" href="https://crf-safe-laac-st.dicella.com">
+                    <p class="experiment-title p-5"><i data-feather="play"></i> SAFE LAAC ST</p>
+                </a>
+            </div>
+            <div class="card-experiment col-md-5 col-lg-3 col-sm-12">
+                <a class="experiment-link" href="https://crf-empa-hcm.dicella.com"> 
+                    <p class="experiment-title p-5"><i data-feather="play"></i> EMPA HCM</p>
+                </a>
+            </div>
+            <div class="card-experiment col-md-5 col-lg-3 col-sm-12">
+                <a class="experiment-link" href="https://crf-arni-arvc.dicella.com">
+                    <p class="experiment-title p-5"><i data-feather="play"></i> ARNI ARVC</p>
+                </a>
+            </div>
+            <div class="card-experiment col-md-5 col-lg-3 col-sm-12">
+                <a class="experiment-link" href="https://crf-optimal-ht.dicella.com"> 
+                    <p class="experiment-title p-5"><i data-feather="play"></i> OPTIMAL HT</p>
+                </a>
+            </div>
+            {% comment %} <div class="card-experiment col-md-5 col-lg-3 col-sm-12">
                 <a class="experiment-link" href=""> 
-                    <p class="experiment-title">SAFE_LAAC</p>
+                    <p class="experiment-title p-5">TEST_LAAC</p>
                 </a>
             </div>
-        </div>
-
-        <div class="card-section">
-            <div class="card-experiment">
-                <a class="experiment-link" href="">
-                    <p class="experiment-title">TEST_CLOT</p>
-                </a>
-            </div>
-
-            <div class="card-experiment">
-                <a class="experiment-link" href="">
-                    <p class="experiment-title">TEST_LAAC</p>
-                </a>
-            </div>
-        </div>
-
-        <div class="card-section">
-            <div class="card-experiment">
+            <div class="card-experiment col-md-5 col-lg-3 col-sm-12">
                 <a class="experiment-link" href=""> 
-                    <p class="experiment-title">TEST_CLOT</p>
+                    <p class="experiment-title p-5">TEST_CLOT</p>
                 </a>
             </div>
-
-            <div class="card-experiment">
-                <a class="experiment-link" href="">
-                    <p class="experiment-title">TEST_LAAC</p>
-                </a>
-            </div>
-        </div>
-
-        <div class="card-section">
-            <div class="card-experiment">
+            <div class="card-experiment col-md-5 col-lg-3 col-sm-12">
                 <a class="experiment-link" href=""> 
-                    <p class="experiment-title">TEST_CLOT</p>
+                    <p class="experiment-title p-5">TEST_LAAC</p>
                 </a>
-            </div>
-
-            <div class="card-experiment">
-                <a class="experiment-link" href=""> 
-                    <p class="experiment-title">TEST_LAAC</p>
-                </a>
-            </div>
-        </div>
-
-        <div class="card-section">
-            <div class="card-experiment">
-                <a class="experiment-link" href=""> 
-                    <p class="experiment-title">TEST_CLOT</p>
-                </a>
-            </div>
-
-            <div class="card-experiment">
-                <a class="experiment-link" href=""> 
-                    <p class="experiment-title">TEST_LAAC</p>
-                </a>
-            </div>
+            </div> {% endcomment %}
         </div>
     </section>
-
     <div class="bottom-bar">
         <div class="foot-container">
             <p class="foot-text">powered by</p>
@@ -128,5 +109,22 @@
             </div>
         </div>
     </div>
+
+    <!-- Script section START -->
+    <script>
+        feather.replace()
+
+        function darkMode() {
+            var element = document.body;
+            element.classList.toggle("darkmode");
+
+            var topBar = document.querySelector(".top-bar");
+            topBar.classList.toggle("darkmode");
+
+            var footContainer = document.querySelector(".foot-container");
+            footContainer.classList.toggle("darkmode");
+          }
+      </script>
+    <!-- Script section END -->
 </body>
 </html>

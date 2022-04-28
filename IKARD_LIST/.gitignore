@@ -15,3 +15,6 @@
 .venv/
 static_collected/
 IKARD_LIST_APP/static/admin/
+IKARD_LIST_APP/__pycache__/*
+homepage/__pycache__/*
+homepage/migrations/*
